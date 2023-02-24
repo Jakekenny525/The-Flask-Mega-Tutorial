@@ -1,0 +1,89 @@
+2023-02-24 09:30:31,199 ERROR: Exception on /index [GET] [in /mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/app.py: 1741]
+Traceback (most recent call last):
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/routes.py", line 31, in index
+    return render_template('index.html', title = 'Home', form = form, posts = posts.items, next_url = next_url, prev_url = prev_url)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/templates/index.html", line 5, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/templates/base.html", line 4, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/templates/base.html", line 51, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/templates/index.html", line 14, in block 'app_content'
+    {% include '_post.html' %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/templates/_post.html", line 7, in top-level template code
+    <img src = "{{post.author.acatar(70)}}"/>
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/venv/lib/python3.8/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'acatar'
+2023-02-24 09:30:57,107 INFO: Microblog startup [in /mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 11/app/__init__.py: 50]
+2023-02-24 09:45:35,635 INFO: Microblog startup [in /mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/__init__.py: 52]
+2023-02-24 09:46:30,016 ERROR: Exception on /reset_password_request [GET] [in /mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/app.py: 1741]
+Traceback (most recent call last):
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/routes.py", line 152, in reset_password_request
+    return render_template('reset_password_request.html', title = "Reset Password', form = form")
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/templates/reset_password_request.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/templates/base.html", line 4, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/templates/base.html", line 51, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/app/templates/reset_password_request.html", line 8, in block 'app_content'
+    {{wtf.quick_form(form)}}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
+  File "/mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 12/venv/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-02-24 11:21:19,109 INFO: Microblog startup [in /mnt/c/Users/jakey/OneDrive/Documents/GitHub/The-Flask-Mega-Tutorial/Chapter 13/app/__init__.py: 53]
